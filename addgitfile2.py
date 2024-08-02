@@ -69,8 +69,26 @@ else:
             origin = repo.remote(name='origin')
             #origin.push('--set-upstream', origin.name, repo.active_branch.name)
             result = origin.push(refspec=f"{repo.active_branch.name}:refs/heads/{repo.active_branch.name}", set_upstream=True, force=True)
-            print(result)
-            print("Changes pushed to the remote repository.")
+            for push_info in push_info_list:
+
+                print(f"Push update: {push_info.summary}")
+
+                if push_info.flags & push_info.ERROR:
+
+                    print(f"Error occurred during push: {push_info.summary}")
+
+                elif push_info.flags & push_info.REJECTED:
+
+                     print(f"Push rejected: {push_info.summary}")
+
+                elif push_info.flags & push_info.UP_TO_DATE:
+
+                    print("Branch is already up-to-date.")
+ 
+                else:
+                    print(f"Push successful: {push_info.summary}")
+                    print(result)
+                    print("Changes pushed to the remote repository.")
         except Exception as e:
 
             print(f"An error occurred while pushing the changes: {e}")
