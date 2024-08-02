@@ -16,7 +16,7 @@ BRANCH_NAME = "master"
 
 # Construct the remote URL with the token
 
-REMOTE_URL = f"https://{USERNAME}:{TOKEN}@github.com/{USERNAME}/{REPO_NAME}"
+REMOTE_URL = f"https://{USERNAME}@github.com/{USERNAME}/{REPO_NAME}"
 
 print(REMOTE_URL)
 
