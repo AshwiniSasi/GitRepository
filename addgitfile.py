@@ -67,7 +67,7 @@ else:
         try:
 
             origin = repo.remote(name='origin')
-            origin.push("--set-upstream", origin, BRANCH_NAME)
+            origin.push("--set-upstream", REPO_NAME, BRANCH_NAME)
 
             print("Changes pushed to the remote repository.")
 
