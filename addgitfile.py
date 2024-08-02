@@ -18,7 +18,7 @@ BRANCH_NAME = "master"
 
 REMOTE_URL = f"https://{USERNAME}:{TOKEN}@github.com/{USERNAME}/{REPO_NAME}"
 
-
+print(REMOTE_URL)
 
 # Open the existing repository
 
