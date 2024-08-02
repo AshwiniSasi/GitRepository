@@ -11,7 +11,7 @@ TOKEN = "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"  # Replace with your GitHub p
 USERNAME = "AshwiniSasi"  # Replace with your GitHub username
 
 REPO_NAME = "GitRepository.git"  # Replace with your repository name
-
+BRANCH_NAME = "master"
 
 
 # Construct the remote URL with the token
@@ -67,8 +67,7 @@ else:
         try:
 
             origin = repo.remote(name='origin')
-
-            origin.push()
+            origin.push("--set-upstream", origin, BRANCH_NAME)
 
             print("Changes pushed to the remote repository.")
 
