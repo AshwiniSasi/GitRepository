@@ -6,7 +6,7 @@ REPO_DIR = "/home/user/automation"  # Replace with your local repo path
 
 COMMIT_MESSAGE = "first commit"
 
-TOKEN = "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"  # Replace with your GitHub personal access token
+TOKEN = "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"  # Replace with your GitHub personal access token
 
 USERNAME = "AshwiniSasi"  # Replace with your GitHub username
 
