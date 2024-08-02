@@ -68,7 +68,7 @@ else:
 
             origin = repo.remote(name='origin')
             #origin.push('--set-upstream', origin.name, repo.active_branch.name)
-            origin.push(refspec=f"{repo.active_branch.name}:refs/heads/{repo.active_branch.name}", set_upstream=True)
+            origin.push(refspec=f"{repo.active_branch.name}:refs/heads/{repo.active_branch.name}", set_upstream=True, force=True)
             
 
             print("Changes pushed to the remote repository.")
